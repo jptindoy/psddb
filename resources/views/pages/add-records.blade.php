@@ -34,6 +34,9 @@
                 <div class="formgroup">
                     <input type="text" class="form-control">
                 </div>
+                <div class="formgroup">
+                    <input type="text" class="form-control">
+                </div>
             </div>
         </div>
     </div>
