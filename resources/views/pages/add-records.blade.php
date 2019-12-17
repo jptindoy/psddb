@@ -31,7 +31,9 @@
             </div>
             <br>
             <div class="col-md-8">
-                
+                <div class="formgroup">
+                    <input type="text" class="form-control">
+                </div>
             </div>
         </div>
     </div>
