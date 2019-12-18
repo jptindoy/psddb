@@ -15,7 +15,13 @@
     <body>
 
         @yield('content')
-
+        <br><br>
+        <div class="footer">
+            <div class="text-center" style=" position: relative; bottom:0;">
+                <h4>Adventist University of the Philippines</h4>
+                <p>Public Safety Department &copy; 2019</p>
+            </div>
+        </div>
     </body>
 
     <script src="{{asset('js/app.js')}}"></script>

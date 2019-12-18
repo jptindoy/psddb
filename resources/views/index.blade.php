@@ -15,7 +15,7 @@
 
             <div class="option">
                 <a href="#"><h4>All Records</h4></a>
-                <a href="#"><h4>Add New Record</h4></a>
+                <a href="/add"><h4>Add New Record</h4></a>
             </div>
         </div>
     </div>
