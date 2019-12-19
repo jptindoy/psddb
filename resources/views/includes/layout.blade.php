@@ -13,7 +13,7 @@
         <!-- Styles -->
     </head>
     <body>
-
+        @include('includes.messages')
         @yield('content')
         <br><br>
         <div class="footer">

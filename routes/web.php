@@ -17,3 +17,9 @@
 
 Route::get('/', 'PagesController@index');
 Route::get('/add', 'PagesController@addrecords');
+
+Route::resource('owners', 'OwnerController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
