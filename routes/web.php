@@ -16,9 +16,11 @@
 // });
 
 Route::get('/', 'PagesController@index');
-Route::get('/add', 'PagesController@addrecords');
+Route::get('/add', 'OwnerController@create');
 
 Route::resource('owners', 'OwnerController');
+
+Route::get('search/{id}', 'SearchController@index');
 
 Auth::routes();
 

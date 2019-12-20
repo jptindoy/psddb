@@ -21,12 +21,7 @@ class CreateOwnersTable extends Migration
             $table->mediumText('address');
             $table->string('contact_no1');
             $table->string('contact_no2');
-            $table->string('model');
-            $table->string('color');
-            $table->string('type');
-            $table->string('plate_number');
-            $table->string('applicant_category');            
-            $table->string('sticker_id');
+            $table->string('applicant_category');   
             $table->timestamps();
         });
     }

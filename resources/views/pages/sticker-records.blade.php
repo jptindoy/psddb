@@ -5,12 +5,20 @@
     <br>
     <br>
     <div class="container">
-        <div class="title">
+        <div class="title">            
+            <div class="float-right">
+                <a href="/" class="btn btn-light">Go back..</a>
+            </div>
             <h1>Vehicle Sticker Records</h1>
-            <a href="/">Back</a>
         </div>
-        <br><br><br>
-        <div class="row">
+        <br>
+        <div class="table"> 
+            @php
+                $total = count($records);
+            @endphp
+            <div class="total-racord">
+                <h4>Total Records: {{$total}}</h4>
+            </div>
             <table class="table table-striped">
                 <thead class="thead-dark">
                   <tr>
@@ -31,8 +39,8 @@
                                 <td>{{$row}}</td>
                                 <td>{{$record->surname}}, {{$record->firstname}}</td>
                                 <td>{{$record->plate_number}}</td>
-                                <td></td>
-                            <td><a href="/owners/{{$record->id}}" class="btn btn-success btn-sm">Details</a></td>
+                                <td>{{$record->sticker_no}}</td>
+                            <td><a href="/owners/{{$record->owner_id}}" class="btn btn-success btn-sm">Details</a></td>
                             </tr>
                            @php
                                $row++;

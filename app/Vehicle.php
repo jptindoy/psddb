@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Sticker extends Model
+class Vehicle extends Model
 {
     //Table Name
-    Protected $table = 'stickers';
+    Protected $table = 'vehicles';
     //Primary Key
     Public $primaryKey = 'id';
 
-    public function owner_sticker(){
+    public function owner_vehicle(){
         return $this->belongsTo('App\Owner');
     }
 }

@@ -10,4 +10,12 @@ class Owner extends Model
     Protected $table = 'owners';
     //Primary Key
     Public $primaryKey = 'id';
+
+    public function sticker(){
+        return $this->hasMany('App\Sticker');
+    }
+
+    public function vehicle(){
+        return $this->hasMany('App\Vehicle');
+    }
 }

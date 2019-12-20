@@ -3,9 +3,11 @@
 @section('content')
 
     <br>
-    <br>
     <div class="container">
         <div class="title">
+            <div class="float-right">
+                <a href="/" class="btn btn-light">Go back..</a>
+            </div>
             <h1>Add Vehicle Sticker Records</h1>
         </div>
         <br><br><br>
@@ -113,15 +115,15 @@
                             </div>
                                                 
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="aupstudent" name="category" class="custom-control-input" onclick="enableInput(this.value);">
+                                <input type="radio" id="aupstudent" name="category" class="custom-control-input" value="AUP Student" onclick="enableInput(this.value);">
                                 <label class="custom-control-label" for="aupstudent">AUP Student</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="aupemployee" name="category" class="custom-control-input" onclick="enableInput(this.value);">
+                                <input type="radio" id="aupemployee" name="category" class="custom-control-input" value="AUP Employee" onclick="enableInput(this.value);">
                                 <label class="custom-control-label" for="aupemployee">AUP Employee</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline form-group">
-                                <input type="radio" id="other" name="category" class="custom-control-input" value="Others" onclick="enableInput(this.value);">
+                                <input type="radio" id="other" name="category" class="custom-control-input" value="Others" value="Others" onclick="enableInput(this.value);">
                                 <label class="custom-control-label" for="other">Others </label>
                                 <input type="text" id="others" name="others" class="form-control" placeholder="* Enter..." disabled>
                             </div>
@@ -129,13 +131,8 @@
                                 <input type="radio" id="guardian" name="category" class="custom-control-input" value="Parents" onclick="enableInput(this.value);">
                                 <label class="custom-control-label" for="guardian">Parent/Guardian (Indicate Name of AUP Student)</label>
                                 <input type="text" id="parent" name="parent" class="form-control" placeholder="* Enter..." disabled>
-                            </div>   
-                            
-                            @php
-                                $stickers = Illuminate\Support\Facades\DB::table('stickers')->get();
-                                $sticker_id = count($stickers) + 1;
-                            @endphp
-                                <input type="hidden" name="sticker_id" value="{{$sticker_id}}">
+                            </div>                               
+                           
                         </div>
                         <br>
                         <div class="submit">
@@ -152,10 +149,10 @@
 
     <script>
         function getStickerColor(value){
-            if(value == 'blue'){
+            if(value == 'Blue'){
                 // alert('Blue');
                 document.getElementById("sticker-img").src='/storage/images/1.jpg';
-            } else if(value == 'green'){
+            } else if(value == 'Green'){
                 //alert('Green');
                 document.getElementById("sticker-img").src='/storage/images/2.jpg';    
             } else {

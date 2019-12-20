@@ -10,7 +10,7 @@ class PagesController extends Controller
         return view('index');
     }
 
-    public function addrecords(){
-        return view('pages.add-records');
-    }
+    // public function addrecords(){
+    //     return view('pages.add-records');
+    // }
 }
