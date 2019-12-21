@@ -19,6 +19,8 @@ Route::get('/', 'PagesController@index');
 Route::get('/add', 'OwnerController@create');
 
 Route::resource('owners', 'OwnerController');
+Route::resource('vehicles', 'VehicleController');
+Route::resource('stickers', 'StickerController');
 
 Route::get('search/{id}', 'SearchController@index');
 

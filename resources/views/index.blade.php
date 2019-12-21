@@ -32,7 +32,7 @@
                 <div id="psdcarousel" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="/storage/images/1.jpg" class="d-block w-100"  alt="">
+                            <img src="/storage/images/Blue.jpg" class="d-block w-100"  alt="">
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="card" style="opacity:0.8;">
                                     <h3 style="color:black; margin-top:10px;"><b>In-campus Sticker</b></h3>
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="/storage/images/2.jpg" class="d-block w-100" alt="">
+                            <img src="/storage/images/Green.jpg" class="d-block w-100" alt="">
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="card" style="opacity:0.8;">
                                     <h3 style="color:black; margin-top:10px;"><b>Off-campus Sticker</b></h3>
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="storage/images/3.jpg" class="d-block w-100" alt="">
+                            <img src="storage/images/Yellow.jpg" class="d-block w-100" alt="">
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="card" style="opacity:0.8;">
                                     <h3 style="color:black; margin-top:10px;"><b>Faculty Sticker</b></h3>
@@ -165,8 +165,6 @@
                 }
             })              
            
-
-            // document.getElementById('result').innerHTML = '<h3 style="color:red;">No record found!</h3> <button class="btn btn-success">Add new record</button>';
 
         }
     </script>

@@ -110,7 +110,7 @@
                             </div>
                         </div>
                         <div class="3rd-part">
-                            <div class="title">
+                            <div class="title"> 
                                 <h3>Applicant Category</h3>
                             </div>
                                                 
@@ -137,7 +137,7 @@
                         <br>
                         <div class="submit">
                             <button type="submit" class="btn btn-primary">Save</button>
-                            <a href="/" class="btn btn-danger">Back</a>
+                            <a href="/" class="btn btn-light">Back</a>
                         </div>
                         <br>
                     
@@ -151,13 +151,13 @@
         function getStickerColor(value){
             if(value == 'Blue'){
                 // alert('Blue');
-                document.getElementById("sticker-img").src='/storage/images/1.jpg';
+                document.getElementById("sticker-img").src='/storage/images/Blue.jpg';
             } else if(value == 'Green'){
                 //alert('Green');
-                document.getElementById("sticker-img").src='/storage/images/2.jpg';    
+                document.getElementById("sticker-img").src='/storage/images/Green.jpg';    
             } else {
                 //alert('Yellow');
-                document.getElementById("sticker-img").src='/storage/images/3.jpg';
+                document.getElementById("sticker-img").src='/storage/images/Yellow.jpg';
             }
         }
 

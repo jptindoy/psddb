@@ -14,4 +14,5 @@ class Sticker extends Model
     public function owner_sticker(){
         return $this->belongsTo('App\Owner');
     }
+    
 }

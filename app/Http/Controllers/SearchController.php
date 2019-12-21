@@ -22,9 +22,10 @@ class SearchController extends Controller
 
         $results = Owner::join('stickers', 'owners.id', '=', 'stickers.owner_id')->join('vehicles', 'owners.id', '=', 'vehicles.owner_id')
                             ->where('owners.surname', 'LIKE', '%' . $id . '%')
+                            ->orWhere('owners.firstname', 'LIKE', '%' . $id . '%')
                             ->orWhere('stickers.sticker_no', 'LIKE', '%' . $id . '%')
                             ->orWhere('vehicles.plate_number', 'LIKE', '%' . $id . '%')
-                            ->paginate(20);
+                            ->paginate(30);
         
         if($results->isEmpty()){
             if($user = Auth::check()){

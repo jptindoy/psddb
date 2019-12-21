@@ -27,7 +27,10 @@ class OwnerController extends Controller
      */
     public function index()
     {
-        $records = Owner::join('stickers', 'owners.id', '=', 'stickers.owner_id')->join('vehicles', 'owners.id', '=', 'vehicles.owner_id')->orderBy('surname', 'asc')->paginate(10);
+        $records = Owner::join('stickers', 'owners.id', '=', 'stickers.owner_id')
+                    ->join('vehicles', 'owners.id', '=', 'vehicles.owner_id')
+                    ->orderBy('surname', 'asc')
+                    ->paginate(10);
         return view('pages.sticker-records')->with('records',$records);
     }
 
@@ -69,7 +72,7 @@ class OwnerController extends Controller
 
         ///create post
         if(Owner::where(['surname' => $request->input('surname'), 'firstname' => $request->input('firstname'), 'midlename' => $request->input('midlename')])->first()) {
-            return redirect('/add')->with('success', 'Record already exist!'); 
+            return redirect('/add')->with('error', 'Record already exist!'); 
         } else {
             // store in owners db
             $owner = new Owner;
@@ -140,7 +143,11 @@ class OwnerController extends Controller
      */
     public function edit($id)
     {
-        //
+        //edit the owner information
+        $infos = Owner::find($id);
+
+        return view('pages.update-info')->with('infos', $infos);
+
     }
 
     /**
@@ -153,6 +160,29 @@ class OwnerController extends Controller
     public function update(Request $request, $id)
     {
         //
+
+        $this->validate($request,[
+            'surname' => 'required',
+            'firstname' => 'required',
+            'address' => 'required',
+            'contact_no1' => 'required',
+            'category' => 'required'
+        ]);
+        
+        $owner = Owner::find($id);
+        $owner->surname = $request->input('surname');
+        $owner->firstname = $request->input('firstname');
+        $owner->midlename = $request->input('midlename');
+        $owner->address = $request->input('address');
+        $owner->contact_no1 = $request->input('contact_no1');
+        $owner->contact_no2 = $request->input('contact_no2');            
+        $owner->applicant_category = $request->input('category');
+        $owner->others = $request->input('others');
+        $owner->parent = $request->input('parent');
+        $owner->save();
+
+        return redirect()->back()->with('success', 'Record Updated!'); 
+
     }
 
     /**
